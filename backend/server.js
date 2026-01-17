@@ -22,8 +22,11 @@ app.get('/', (req, res) => {
 // Route Files
 const auth = require('./routes/auth');
 
+const issues = require('./routes/issues');
+
 // Mount routers
 app.use('/api/v1/auth', auth);
+app.use('/api/v1/issues', issues);
 
 const startServer = async () => {
   try {
